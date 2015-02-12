@@ -5,12 +5,12 @@
   var previous = root.previous;
 
   var todos = function() {
-  }
+  };
 
   todos.noConflict = function() {
     root.todos = previous;
     return todos;
-  }
+  };
 
   if(typeof exports !== 'undefined') {
     if(typeof module !== 'undefined' && module.exports) {
@@ -25,4 +25,14 @@
   todos.Todo = function(title) {
     this.title = title || '';
   };
+
+  todos.List = function() {
+    this.todos = [];
+  };
+
+  todos.List.prototype.add = function(todo) {
+    this.todos.push(todo);
+  };
+
 }).call(this);
+
