@@ -23,6 +23,6 @@
 
   // TODO's app from here
   todos.Todo = function(title) {
-    this.title = title;
+    this.title = title || '';
   };
 }).call(this);

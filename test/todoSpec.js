@@ -11,5 +11,11 @@ describe('A todo item', function() {
     var todo = new todos.Todo('a title');
     expect(todo.title).to.equal('a title');
   });
+
+  it('has no title if none is given', function() {
+    var todo = new todos.Todo;
+    expect(todo.title).to.equal('');
+  });
+
 });
 
