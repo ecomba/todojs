@@ -29,5 +29,13 @@ describe('A todo item', function() {
      expect(todo.isDone()).to.be.true;
   });
 
+  it('can be marked as undone if marked done wrongly', function() {
+    var todo = new todos.Todo('marking undone');
+    todo.done();
+    todo.undone();
+
+    expect(todo.isDone()).to.be.false;
+  });
+
 });
 

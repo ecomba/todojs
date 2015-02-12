@@ -35,6 +35,10 @@
     this.finished = true;
   };
 
+  todos.Todo.prototype.undone = function() {
+    this.finished = false;
+  };
+
   todos.List = function() {
     this.todos = [];
   };
