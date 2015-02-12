@@ -17,5 +17,17 @@ describe('A todo item', function() {
     expect(todo.title).to.equal('');
   });
 
+  it('is not done by default', function() {
+    var todo = new todos.Todo('not done');
+    expect(todo.isDone()).to.be.false;
+  });
+
+  it('is done when it is marked as done', function() {
+     var todo = new todos.Todo('mark as done');
+     todo.done();
+
+     expect(todo.isDone()).to.be.true;
+  });
+
 });
 

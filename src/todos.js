@@ -24,6 +24,15 @@
   // TODO's app from here
   todos.Todo = function(title) {
     this.title = title || '';
+    this.finished = false;
+  };
+
+  todos.Todo.prototype.isDone = function() {
+    return this.finished;
+  };
+
+  todos.Todo.prototype.done = function() {
+    this.finished = true;
   };
 
   todos.List = function() {
