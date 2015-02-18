@@ -1,10 +1,5 @@
 "use strict";
 
-var todos = require('../src/todos.js');
-
-var chai = require('chai');
-var expect = chai.expect;
-
 describe('A todo list', function() {
   var list;
 
@@ -13,12 +8,13 @@ describe('A todo list', function() {
   });
 
   it('contains no items at first', function() {
-    expect(list.todos).to.be.empty;
+    expect(list.todos).toEqual([]);
   });
 
   it('can add a todo to the list', function() {
-    list.add(new todos.Todo);
-    expect(list.todos).not.to.be.empty;
+    var item = new todos.Todo;
+    list.add(item);
+    expect(list.todos).toEqual([item]);
   });
 });
 
