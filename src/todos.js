@@ -22,6 +22,14 @@
   }
 
   // TODO's app from here
+
+  todos.init = function() {
+    var input = document.createElement('input');
+    input.setAttribute('type', 'text');
+    input.setAttribute('id', 'addTodo');
+    document.getElementById('todos').appendChild(input);
+  };
+
   todos.Todo = function(title) {
     this.title = title || '';
     this.finished = false;
